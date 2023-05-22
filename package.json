@@ -1,0 +1,20 @@
+{
+  "name": "ctv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tailwind:buildnpx": "npx tailwindcss -i src/tailwind.css -o build/assets/css/style.css --minify",
+    "build": "npm run tailwind:buildnpx && gulp"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "caniuse-lite": "^1.0.30001488",
+    "gulp": "^4.0.2",
+    "gulp-nunjucks-render": "^2.2.3"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.2"
+  }
+}

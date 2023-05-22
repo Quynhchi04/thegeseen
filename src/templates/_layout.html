@@ -1,0 +1,39 @@
+{% import 'macros/_ultis.html' as ultis %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    {% block head %}
+    <title>{{title}}</title>
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="{{description}}">
+    {% endblock %}
+</head>
+
+<body>
+    {% include "partials/_header.html" %}
+    {% include "partials/_breadcrumb.html" %}
+    <main class="container mx-auto px-3 flex flex-wrap">
+        <div class="w-full md:w-2/3 flex flex-col">
+            {% block content %} {% endblock %}
+            {% include "partials/_nav-next.html" %}
+            {% include "partials/_related.html" %}
+        </div>
+        {% include "partials/_aside.html" %}
+    </main>
+    {% include "partials/_footer.html" %}
+
+    <!-- Scripts. -->
+    {% block scripts %}
+    <script src="/assets/js/index.js" charset="utf-8"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    {% endblock %}
+</body>
+
+</html>
